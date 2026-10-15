@@ -1,0 +1,28 @@
+/* =========================================================
+   Globale Design-Tokens & Variablen
+========================================================= */
+@import './styles/variables.css';
+
+/* =========================================================
+   Reset, Basis-Layout (Body, Sidebar, Main Content)
+========================================================= */
+@import './styles/layout.css';
+
+/* =========================================================
+   Wiederverwendbare UI-Komponenten (Badges, Tables, Cards)
+========================================================= */
+@import './styles/components.css';
+
+/* =========================================================
+   Seiten-spezifische Styles (Nur falls Abweichungen nötig)
+========================================================= */
+@import './styles/pages/dashboard.css';
+@import './styles/pages/detail-pages.css';
+
+/* Wenn du später doch noch seitenspezifische Dinge hast, 
+   kannst du sie hier einkommentieren: */
+/* @import './pages/events.css'; */
+/* @import './pages/alerts.css'; */
+/* @import './pages/incidents.css'; */
+/* @import './pages/hosts.css'; */
+/* @import './pages/correlations.css'; */

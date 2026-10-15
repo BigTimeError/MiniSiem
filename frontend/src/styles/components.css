@@ -1,0 +1,274 @@
+/* Cards & Section Headers */
+.content-card {
+  min-width: 0;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.section-header h2 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.section-header p {
+  margin: 5px 0 0;
+  color: var(--text-subtle);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Unified Filters (ersetzt alerts-filter, events-filter, incidents-filter etc.) */
+.filter-card {
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  align-items: end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.filter-group label {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.filter-input, .filter-select {
+  width: 100%;
+  padding: 10px 11px;
+  color: var(--text-primary);
+  background: var(--bg-input);
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.filter-input:focus, .filter-select:focus {
+  border-color: var(--border-focus);
+}
+
+.filter-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn {
+  padding: 10px 12px;
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary {
+  color: #dbeafe;
+  background: #1d3555;
+  border-color: #315782;
+}
+
+.btn-primary:hover {
+  background: #25446c;
+}
+
+/* Unified Data Tables (ersetzt soc-table, events-table, hosts-table etc.) */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.data-table th {
+  padding: 13px 16px;
+  color: var(--text-muted);
+  background: var(--bg-card-alt);
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 10px;
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.data-table td {
+  padding: 14px 16px;
+  color: #c5cad3;
+  border-bottom: 1px solid #222631;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.data-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.data-table tbody tr:hover {
+  background: var(--bg-table-hover);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Typografie Helfer in Tabellen */
+.text-mono {
+  font-family: var(--font-mono);
+}
+.text-timestamp {
+  color: #a9b8cb;
+  font-variant-numeric: tabular-nums;
+  font-size: 11px;
+}
+.text-link {
+  color: var(--accent-blue-light);
+  text-decoration: none;
+}
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* Unified Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  background: var(--bg-card-alt);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.pagination span {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.pagination-buttons {
+  display: flex;
+  gap: 7px;
+}
+
+/* Unified Severity Badges (Ersetzt die 7 redundanten Definitionen) */
+.badge-severity {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 7px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.severity-critical { color: var(--accent-red); background: var(--bg-critical); border-color: var(--border-critical); }
+.severity-high { color: var(--accent-orange); background: var(--bg-high); border-color: var(--border-high); }
+.severity-medium { color: var(--accent-yellow); background: var(--bg-medium); border-color: var(--border-medium); }
+.severity-low { color: var(--accent-green); background: var(--bg-low); border-color: var(--border-low); }
+.severity-info { color: #aeb6c4; background: var(--bg-info); border-color: var(--border-info); }
+
+/* Unified Status Badges (Alerts & Incidents) */
+.badge-status {
+  display: inline-block;
+  padding: 4px 7px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.status-open { color: var(--accent-red); background: var(--bg-critical); border-color: var(--border-critical); }
+.status-progress, .status-investigating { color: var(--accent-blue-light); background: rgba(96, 165, 250, 0.09); border-color: rgba(96, 165, 250, 0.2); }
+.status-resolved, .status-closed { color: var(--accent-green); background: var(--bg-low); border-color: var(--border-low); }
+.status-false_positive { color: #aeb6c4; background: var(--bg-info); border-color: var(--border-info); }
+
+/* States: Loading, Empty, Error */
+.state-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  font-size: 13px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 180px;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--bg-card-alt);
+  border: 1px dashed var(--border-input);
+  border-radius: var(--radius-md);
+}
+
+.empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--accent-blue-light);
+  background: rgba(96, 165, 250, 0.09);
+  border: 1px solid rgba(96, 165, 250, 0.18);
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.error-state {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  color: #fca5a5;
+  background: rgba(127, 29, 29, 0.15);
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  border-radius: 7px;
+}

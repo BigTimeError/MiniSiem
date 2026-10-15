@@ -1,0 +1,47 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: minisiem-postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: minisiem
+      POSTGRES_USER: minisiem
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD must be set}
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: .
+    container_name: minisiem-backend
+    restart: unless-stopped
+
+    depends_on:
+      - postgres
+
+    ports:
+      - "8000:8000"
+
+    environment:
+      DATABASE_URL: postgresql+psycopg://minisiem:${POSTGRES_PASSWORD:?POSTGRES_PASSWORD must be set}@postgres:5432/minisiem
+      FRONTEND_ORIGIN: ${FRONTEND_ORIGIN:?FRONTEND_ORIGIN must be set}
+      AGENT_API_TOKEN: ${AGENT_API_TOKEN:?AGENT_API_TOKEN must be set}
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: ${VITE_API_URL:?VITE_API_URL must be set}
+
+    container_name: minisiem-frontend
+    restart: unless-stopped
+
+    depends_on:
+      - backend
+
+    ports:
+      - "3000:80"
+
+volumes:
+  postgres_data:
