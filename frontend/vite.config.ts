@@ -9,5 +9,5 @@ import { defineConfig } from 'vite'
 // Uncomment this when used for github Pages or for DEMO purposes, else use above
 export default defineConfig({
   plugins: [react()],
-  base: '/minisiem/',
+  base: '/MiniSiem/',
 })
