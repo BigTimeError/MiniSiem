@@ -6,7 +6,7 @@ MiniSIEM collects and processes security-relevant log events, detects suspicious
 
 **This project was developed for educational purposes** to explore SIEM architecture, security event processing, detection engineering, backend development, and full-stack application design.
 
-**[Live Demo](DEMO_URL_HERE)** · **[Source Code](REPOSITORY_URL_HERE)**
+**[Live Demo](DEMO_URL_HERE)** · **[Source Code]((https://github.com/BigTimeError/MiniSiem/tree/main/backend))**
 
 ![MiniSIEM Dashboard](docs/images/dashboard.png)
 
