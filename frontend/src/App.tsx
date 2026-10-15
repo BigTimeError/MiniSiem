@@ -18,7 +18,8 @@ import Incidents from "./pages/Incidents";
 import IncidentDetail from "./pages/IncidentDetail";
 
 function App() {
-return ( <BrowserRouter> <Routes>
+  // Delete the basename when using yourself
+return ( <BrowserRouter basename="/MiniSiem"> <Routes> 
 <Route
 path="/"
 element={<Navigate to="/dashboard" replace />}
