@@ -10,4 +10,7 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   base: '/MiniSiem/',
+  define: {
+    'import.meta.env.VITE_DEMO_MODE': JSON.stringify('true'),
+  },
 })
