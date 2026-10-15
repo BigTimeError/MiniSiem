@@ -264,7 +264,7 @@ function AlertDetail() {
                           fontSize: "18px",
                         }}
                       >
-                        ≡
+                        ≋
                       </span>
 
                       <div
