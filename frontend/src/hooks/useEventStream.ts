@@ -3,6 +3,9 @@ import { useEffect } from "react";
 const API_URL =
   import.meta.env.VITE_API_URL ?? "http://localhost:8000";
 
+const DEMO_MODE =
+  import.meta.env.VITE_DEMO_MODE === "true";
+
 export type StreamEventType =
   | "event_created"
   | "alert_created"
@@ -102,6 +105,10 @@ function startEventStream() {
 }
 
 function subscribe(listener: Listener) {
+   if (DEMO_MODE) {
+    return () => {};
+  }
+  
   listeners.add(listener);
 
   startEventStream();
