@@ -40,7 +40,7 @@ The dashboard and detail pages are designed to make security findings easier to 
 
 > **Demo:** Visit the live demo to explore the interface and see the implemented features in action. The demo is intended for demonstration purposes and may use sample data or have limited functionality compared with a locally running instance.
 
-**[Open the MiniSIEM Demo]((https://bigtimeerror.github.io/MiniSiem/))**
+**[Open the MiniSIEM Demo]((https://bigtimeerror.github.io/MiniSiem/)**
 
 ## Architecture
 
